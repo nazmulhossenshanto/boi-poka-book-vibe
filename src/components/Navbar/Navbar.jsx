@@ -1,13 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
-  const ul = (
+  const links = (
     <>
       <li>
-        <a>Books</a>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <a>Dashboard</a>
+       <NavLink to="listedBooks">ListedBooks</NavLink>
       </li>
       <li>
         <a>Books</a>
@@ -40,14 +41,14 @@ const Navbar = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-             {ul}
+             {links}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">Boi Poka</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-           {ul}
+           {links}
           </ul>
         </div>
         <div className="navbar-end">
